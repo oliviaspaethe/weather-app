@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>Weather app</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="card main-card">
+            <div class="card-body">
+
+
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-7">
+                            <input type="text" class="form-control" id="search-bar" placeholder="Enter a city"
+                                aria-label="Enter a city">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                            <button type="submit" class="btn btn-secondary">Current</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <div class="row justify-content-between current-state">
+                    <div class="col-6 current-state-left-column">
+
+                        <span class="current-emoji">☀️</span>
+                        <span class="current-temp"></span> <a href="#" id="cel-temp"> <span>°C</span> </a> | <a href="#"
+                            id="far-temp"> <span>°F</span> </a>
+                        <div class="current-humidity">Humidity: <span id="humidity"></span>%</div>
+                        <div class="current-wind">Wind: <span id="wind"></span> mph</div>
+
+                    </div>
+                    <div class="col-6 current-state-right-column">
+
+                        <div class="current-city"></div>
+                        <div class="current-date">Saturday 27 August 15:00</div>
+                        <div class="current-weather"></div>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row align-items-end preview-grid">
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Sat</div>
+                        <div class="preview-emoji">☀️</div>
+                        <span class="preview-high-temp">25° </span>
+                        <span class="preview-low-temp"> 15°</span>
+                    </div>
+
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Sun</div>
+                        <div class="preview-emoji">🌤</div>
+                        <span class="preview-high-temp">26° </span>
+                        <span class="preview-low-temp"> 12°</span>
+                    </div>
+
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Mon</div>
+                        <div class="preview-emoji">☁️</div>
+                        <span class="preview-high-temp">21° </span>
+                        <span class="preview-low-temp"> 10°</span>
+                    </div>
+
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Tue</div>
+                        <div class="preview-emoji">🌦</div>
+                        <span class="preview-high-temp">20° </span>
+                        <span class="preview-low-temp"> 9°</span>
+                    </div>
+
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Wed</div>
+                        <div class="preview-emoji">🌧</div>
+                        <span class="preview-high-temp">19° </span>
+                        <span class="preview-low-temp"> 10°</span>
+                    </div>
+
+                    <div class="col preview-day">
+                        <div class="preview-weekday">Thu</div>
+                        <div class="preview-emoji">🌤</div>
+                        <span class="preview-high-temp">21° </span>
+                        <span class="preview-low-temp"> 12°</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="index.js"> </script>
+</body>
+
+</html>
