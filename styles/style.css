@@ -58,3 +58,8 @@ a {
 .preview-low-temp {
   color: #42a5f5;
 }
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+}
