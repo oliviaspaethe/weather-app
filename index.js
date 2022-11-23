@@ -22,6 +22,7 @@ date.innerHTML = `${day} ${hour}:${minutes}`;
 // Display search result city + temperature
 
 function displayCurrentWeather(response) {
+  console.log(response.data);
   document.querySelector(".current-city").innerHTML = response.data.name;
   document.querySelector(".current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -32,6 +33,9 @@ function displayCurrentWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector(".current-emoji").setAttribute =
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(city) {
