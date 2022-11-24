@@ -29,13 +29,19 @@ function displayCurrentWeather(response) {
   );
   document.querySelector(".current-weather").innerHTML =
     response.data.weather[0].main;
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector(".current-emoji").setAttribute =
-    ("src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document
+    .querySelector(".current-emoji")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function search(city) {
@@ -56,12 +62,10 @@ searchBar.addEventListener("submit", handleSubmit);
 
 search("London");
 
-/* bonus feature
-
 function celFormat(event) {
   event.preventDefault();
   let displayCel = document.querySelector(".current-temp");
-  displayCel.innerHTML = `24`;
+  displayCel.innerHTML = `226`;
 }
 
 function farFormat(event) {
@@ -74,4 +78,3 @@ let celsius = document.querySelector("#cel-temp");
 celsius.addEventListener("click", celFormat);
 let farenheit = document.querySelector("#far-temp");
 farenheit.addEventListener("click", farFormat);
-*/
